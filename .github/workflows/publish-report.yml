@@ -19,7 +19,7 @@ jobs:
         PR_NUMBER=$(cat pr_number)
         echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
     - name: Test Report
-      uses: phoenix-actions/test-reporting@v13
+      uses: phoenix-actions/test-reporting@v15
       id: test-report
       with:
         artifact: test-results
