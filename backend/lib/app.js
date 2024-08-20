@@ -9,7 +9,7 @@ export default async function(fastify) {
     routePrefix: '/docs',
     openapi: {
       info: {
-        title: 'CSAF Validator Service',
+        title: 'CSAF Validator Servicelol',
         version: '1.3.37',
         description:
           'This is a service to validate documents against the CSAF standard.',
