@@ -9,9 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download workflow artifact
-      uses: dawidd6/action-download-artifact@v3.1.4
+      uses: actions/download-artifact@v4
       with:
-        workflow: run-tests.yml
         name: test-results
         run_id: ${{ github.event.workflow_run.id }}
     - name: Set pr number env
@@ -22,7 +21,6 @@ jobs:
       uses: phoenix-actions/test-reporting@v13
       id: test-report
       with:
-        artifact: test-results
         name: Mocha Tests
         path: backend/test-results.json
         reporter: mocha-json
